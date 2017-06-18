@@ -43,6 +43,9 @@ ls -aF |grep emacs
 # .spacemacs #
 ```
 
+* Install [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+Launch Font Book App to install font 
+
 #### Make dot directory are under source control
 
 ```sh
@@ -61,7 +64,45 @@ git push -u origin master
 ln -s ~/.spacemacs.d ~/Code/spacemacs-d
 ```
 
+#### Spacemacs Configuration
+
+```
+(osx :variables osx-dictionary-dictionary-choice "English")
+     helm
+     auto-completion
+     better-defaults
+     emacs-lisp
+     git
+     markdown
+     org
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     spell-checking
+     syntax-checking
+     version-control
+)
+
+# Maximized At Startup
+dotspacemacs-maximized-at-startup t
+```
+
+#### Spacemacs Shortcut
+
+##### Window manipulation
+
+| Key      | Description                            |
+| :------- | :------------------------------------- |
+| _ w v    | vertical split                         |
+| _ w V    | vertical split and focus new window    |
+| _ w s    | horizontal split                       |
+| _ w s    | horizontal split                       |
+| _ w d    | delete a window                        |
+
+
+
 #### Use Spacemacs and Jekyll to write Blog 
+
 * Install [Jekyll::Compose](https://github.com/jekyll/jekyll-compose)
 
 ```rb
@@ -77,4 +118,3 @@ publish    # Moves a draft into the _posts directory and sets the date
 unpublish  # Moves a post back into the _drafts directory
 page       # Creates a new page with the given NAME
 ```
-
