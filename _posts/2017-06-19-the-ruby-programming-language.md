@@ -46,3 +46,9 @@ bundle config mirror.https://rubygems.org https://gems.ruby-china.org
 ```
 
 ## Learn Ruby
+
+#### Simple HTTP Server
+
+```rb
+ruby -run -e httpd -- -p 5000 .
+```
